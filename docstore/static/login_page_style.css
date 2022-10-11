@@ -17,14 +17,15 @@ body{
     padding-right: 3%;
 }
 img{
-    scale: 1.158;
+    scale: 1.12;
 }
 .container{
-    width: fit-content;
+    width: 33%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    height: 53vh;
 }
 
 
@@ -43,7 +44,8 @@ input{
     border-top: none;
     border-bottom:solid #E0ADA4;
     width:100%;
-    color: #fc5d28;
+    /* color: #fc5d28; */
+    color: #e29d91;
     font-family: 'Roboto';
     font-size: 1em;
 
@@ -57,11 +59,8 @@ input:focus-visible{
     outline: none;
 }
 input.login{
-    margin-bottom: 20%;
-    margin-top: 20%;
-
-}
-input.password{
+    margin-bottom: 10%;
+    
 
 }
 
@@ -72,10 +71,52 @@ button{
     border-radius: 11px;
     border: none;
     color: white;
-    margin-top: 19%;
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 1em;
+    margin-right: 0;
+}
+button:hover{
+    transform: scale(1.1);
+    background-color: rgb(112, 103, 207);
+    transition: all 800ms;
+}
+
+
+a{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 0.9em;
+    text-decoration:none;
+    color: #de6a55;
+}
+a:hover{
+    transform: scale(1.1);
+    transform: translateX(1px);
+    color: rgb(112, 103, 207);
+    transition: all 800ms;
+}
+
+
+.inputs{
+    width: 100%;
+    margin-top: 10%;
+}
+
+
+.enter{
+    display: flex;
+    font-display: column;
+    justify-content: space-between;
+    align-items:center;
+    margin-top: 19%;
+    width: 100%;
+}
+.problems{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 
