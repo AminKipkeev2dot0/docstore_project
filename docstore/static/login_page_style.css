@@ -1,3 +1,82 @@
-h1{
-    color: blue;
+*{
+    box-sizing: border-box;
 }
+
+body{
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+.main{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 3%;
+}
+img{
+    scale: 1.158;
+}
+.container{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo{
+    font-family: 'Baloo Tammudu 2';
+    font-weight: 700;
+    font-size: 4em;
+    color: #fc5d28;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+input{
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom:solid #E0ADA4;
+    width:100%;
+    color: #fc5d28;
+    font-family: 'Roboto';
+    font-size: 1em;
+
+}
+input::placeholder{
+    color: #DCC3BF;
+    font-size: 1.25em;
+}
+
+input:focus-visible{
+    outline: none;
+}
+input.login{
+    margin-bottom: 20%;
+    margin-top: 20%;
+
+}
+input.password{
+
+}
+
+button{
+    width: 38%;
+    height: 5vh;
+    background-color: #fc5d28;
+    border-radius: 11px;
+    border: none;
+    color: white;
+    margin-top: 19%;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 1em;
+}
+
+
+
