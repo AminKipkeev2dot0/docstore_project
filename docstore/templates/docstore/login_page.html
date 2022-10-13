@@ -18,12 +18,12 @@
         <div class="container">
             <h1 class="logo">DocStore</h1>
             <div class="inputs">
-                <input type="text" placeholder="Логин" class="login">
-                <input type="text" class="password" placeholder="Пароль">
+                <input type="email" placeholder="Электронная почта" class="login">
+                <input type="password" class="password" placeholder="Пароль">
             </div>
             <div class="enter">
                 <div class="problems">
-                    <a href="#">Регистрация</a>
+                    <a href="{% url 'registr' %}">Регистрация</a>
                     <a href="#">Забыли пароль?</a>
                 </div>
                 <button>Войти</button>

@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.container{
+    width: 29%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 70vh;
+}
+
+
+.logo{
+    font-family: 'Baloo Tammudu 2';
+    font-weight: 700;
+    font-size: 5em;
+    color: #fc5d28;
+    width: fit-content;
+    margin: 0 auto;
+    
+}
+
+input{
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom:solid #E0ADA4;
+    width:100%;
+    /* color: #fc5d28; */
+    color: #e29d91;
+    font-family: 'Roboto';
+    font-size: 1em;
+    margin-bottom: 14%;
+
+}
+input::placeholder{
+    color: #DCC3BF;
+    font-size: 1.4em;
+}
+
+input:focus-visible{
+    outline: none;
+}
+input.login{
+    margin-bottom: 10%;
+    
+
+}
+
+button{
+    width: 38%;
+    height: 5vh;
+    background-color: #fc5d28;
+    border-radius: 11px;
+    border: none;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 1em;
+    margin-right: 0;
+}
+button:hover{
+    transform: scale(1.1);
+    background-color: rgb(32, 84, 56);
+    transition: all 800ms;
+}
+
+
+a{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 0.9em;
+    text-decoration:none;
+    color: #de6a55;
+}
+a:hover{
+    transform: scale(1.1);
+    transform: translateX(1px);
+    color: rgb(112, 103, 207);
+    transition: all 800ms;
+}
+
+
+.inputs{
+    width: 100%;
+    margin-top: 0%;
+}
+
+
+
+
+
+
