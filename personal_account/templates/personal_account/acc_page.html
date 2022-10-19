@@ -1,13 +1,72 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'personal_account/acc_page_style.css' %}">
+    <title>Account</title>
 </head>
 <body>
-    <h2>account</h2>
-    <h1>Kipkeev Masnaviev</h1>
+    <div class="container">
+        <div class="upper-menu">
+            <h1 class="logo">DocStore</h1>
+            <div class="left_p">
+                <div class="acc_owner_asPassport">Мистер Мистерович Бурмистров</div>
+                <img src="{% static 'personal_account/img/logout.png' %}" alt="logout">
+            </div>   
+        </div>
+        <div class="content">
+            <div class="list_of_docs">
+                <ul>
+                    <li><div class="passport">Паспорт</div></li>
+                    <li><div class="snils">СНИЛС</div></li>
+                    <li><div class="driving_license">Водительское удостоверение</div></li>
+                    <li><div class="doc">Справка в ПФР</div></li>
+                    <li><div class="doc">Свидетельство о рождении</div></li>
+                    <li><div class="doc">Справка 1</div></li>        
+                    <li><div class="doc">Справка 2</div></li>
+                    <li><div class="doc">Справка 3</div></li>
+                    <li><div class="doc">Справка 4</div></li>
+                </ul>
+                <button>Добавить документ</button>
+            </div>
+            <div class="doc_view">
+                <div class="scan">
+                    <div class="back_of_scan"><img src="" alt="scan" class="scan"></div>
+                    <button class="change_scan">Изменить</button>
+                </div>
+                <div class="doc_data">
+                    <div class="cols">
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                    </div>
+                    <div class="btns">
+                        <button>Изменить</button>
+                        <button>Использовано</button>
+                        <button>Удалить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </body>
 </html>

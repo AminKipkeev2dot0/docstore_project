@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: solid blue 0.5px;
+    list-style-type: none;
+}
+/*Sector A: Settings of container which contains all content in it*/
+.container{
+    background-color: rgb(250, 220, 220);
+    width: 90%;
+    height: 99vh;
+    margin: 0 auto;
+}
+/*end of Sector A*/
+
+
+/* Sector B: Settings of upper menu which contains logo, account holder and logout button */
+.upper-menu{
+    height: 9%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+.upper-menu .left_p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 26%;
+}
+.upper-menu img{
+    scale:0.7;
+}
+.acc_owner_asPassport{
+    width:fit-content;
+}
+
+/* End of Sector B */
+
+.content{
+    width: 100%;
+    height:87%;
+    display: flex;
+    justify-content: space-between;
+}
+.list_of_docs{
+    padding-top: 7%;
+    width: 16%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.doc_view{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:76%;
+}
+.scan{
+    width: 46%;
+    height: 80%;
+}
+.back_of_scan{
+    height:95% ;
+}
+.doc_data{
+    width: 52%;
+    height: 80%;
+}
+
+
+.col{
+    height: 4vh;
+}
