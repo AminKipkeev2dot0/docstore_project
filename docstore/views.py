@@ -8,3 +8,7 @@ def registr_page_load(request):
 
 def forgot_pass_page_load(request):
     return render(request, 'docstore/forgot_password_page.html')
+
+def data_send_email(request):
+    return render(request, 'docstore/password_send_email.html')
+
