@@ -14,5 +14,11 @@ from docstore.settings import MEDIA_ROOT
 class Doc(models.Model):
     title=models.CharField(null=True,max_length=100)
     descr=models.TextField(null=True)
-    scan=models.FileField(null=True,upload_to='docs/')    
+    scan=models.FileField(null=True,upload_to='docs/') 
+
+    class Meta:
+        verbose_name_plural = 'Documents'
+        verbose_name = 'Document'   
+        
+
 

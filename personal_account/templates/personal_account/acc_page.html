@@ -24,7 +24,12 @@
         <div class="content">
             <div class="list_of_docs">
                 <ul>
-                    <li><div class="passport">Паспорт</div></li>
+                    {%for doc in docs%}
+                    <li>{{doc.title}}</li>
+                    {%endfor%}
+                    
+                    
+                    <!-- <li><div class="passport">Паспорт</div></li>
                     <li><div class="snils">СНИЛС</div></li>
                     <li><div class="driving_license">Водительское удостоверение</div></li>
                     <li><div class="doc">Справка в ПФР</div></li>
@@ -32,7 +37,7 @@
                     <li><div class="doc">Справка 1</div></li>        
                     <li><div class="doc">Справка 2</div></li>
                     <li><div class="doc">Справка 3</div></li>
-                    <li><div class="doc">Справка 4</div></li>
+                    <li><div class="doc">Справка 4</div></li> -->
                 </ul>
                 <button>Добавить документ</button>
             </div>
