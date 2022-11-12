@@ -23,24 +23,20 @@
         </div>
         <div class="content">
             <div class="list_of_docs">
-                <ul>
                     {%for doc in docs%}
-                    <li>{{doc.title}}</li>
+                    <a>{{doc.title}}</a>
                     {%endfor%}
-                    
-                    
-                    <!-- <li><div class="passport">Паспорт</div></li>
-                    <li><div class="snils">СНИЛС</div></li>
-                    <li><div class="driving_license">Водительское удостоверение</div></li>
-                    <li><div class="doc">Справка в ПФР</div></li>
-                    <li><div class="doc">Свидетельство о рождении</div></li>
-                    <li><div class="doc">Справка 1</div></li>        
-                    <li><div class="doc">Справка 2</div></li>
-                    <li><div class="doc">Справка 3</div></li>
-                    <li><div class="doc">Справка 4</div></li> -->
-                </ul>
-                <button>Добавить документ</button>
             </div>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="ent_doc">Добавить документ</button>
+                <div id="btn_dropdown" class="btn_podcont">
+                    <a href="#">Паспорт</a>
+                    <a href="#">СНИЛС</a>
+                    <a href="#">Водительское удостоверение</a>
+                    <a href="#">Другое</a>
+                </div>
+            </div>
+            
             <div class="doc_view">
                 <div class="scan">
                     <div class="back_of_scan"><img src="" alt="scan" class="scan"></div>
@@ -73,5 +69,27 @@
         </div>
 
     </div>
+    <script>
+        /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("btn_dropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.ent_doc')) {
+
+            var dropdowns = document.getElementsByClassName("btn_podcont");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+            }
+        }
+        }
+    </script>
 </body>
 </html>
