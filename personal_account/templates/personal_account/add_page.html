@@ -1,0 +1,12 @@
+{%extends 'personal_account/acc_page.html'%}
+{%block title%}New doc{%endblock%}
+{%block content%}
+<div class="pupup">
+    <form method="post" action="{%url 'add'%}" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <p>kdkdkdkdkdkdk</p>
+        <button type="submit"> Добавить</button>  
+    </form>
+</div>
+{%endblock%}
