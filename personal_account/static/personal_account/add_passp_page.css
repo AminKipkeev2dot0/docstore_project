@@ -1,0 +1,17 @@
+@import url("acc_page_style.css");
+.popup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.alert{
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2em;
+    color: #fc5d28b2;
+    border: none;
+}

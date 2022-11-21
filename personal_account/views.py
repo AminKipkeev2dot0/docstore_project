@@ -13,6 +13,9 @@ def acc_page_load(request):
         docs=Doc.objects.all()
         return render(request, 'personal_account/acc_page.html',{'docs':docs})
 
+def addPassword_page_load(request):
+        return render(request, 'personal_account/add_passp_page.html')
+
 class DocCreateView(CreateView):
     template_name='personal_account/add_page.html'
     form_class=DocForm

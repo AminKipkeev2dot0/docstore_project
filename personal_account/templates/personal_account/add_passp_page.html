@@ -1,8 +1,11 @@
 {%extends 'personal_account/acc_page.html'%}
-{%block title%}New doc{%endblock%}
+{%load static%}
+{%block style%}<link rel="stylesheet" href="{% static 'personal_account/add_passp_page.css' %}">{%endblock%}
+{%block title%}New passport{%endblock%}
 {%block content%}
 <div class="popup">
-    <form method="post" action="{%url 'add'%}" enctype="multipart/form-data">
+    <p class="alert">Данная страница скоро будет доступна...</p>
+    <!-- <form method="post" action="{%url 'add'%}" enctype="multipart/form-data">
         {% csrf_token %}
         {%for field in form%}
         <div class="block">
@@ -11,6 +14,6 @@
         </div>
         {%endfor%}
         <button type="submit" class="submit_doc"> Добавить</button>  
-    </form>
+    </form> -->
 </div>
 {%endblock%}

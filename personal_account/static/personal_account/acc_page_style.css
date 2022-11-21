@@ -109,10 +109,6 @@
     transition-duration: 100ms;
 }
 .ent_doc{
-    /* position: absolute; */
-    /* z-index: 2; */
-    /* bottom: 6%;
-    left: 6%; */
     width: 36%;
     background-color: #3dda2f;
     color: rgb(251, 251, 251);
@@ -123,6 +119,18 @@
     font-weight: 400;
     font-size: 0.8em;
     
+}
+.submit_doc{
+    width: 36%;
+    height: 3vh;
+    background-color: #3dda2f;
+    color: rgb(251, 251, 251);
+    border: none;
+    border-radius: 6px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.8em;
 }
 .dropdown{
     position: absolute;
@@ -215,3 +223,34 @@
 .col{
     height: 4vh;
 }
+
+/* add_page styles */
+.popup{
+    padding:7% 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+form{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;align-items: center;
+}
+.block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.name{
+    margin-bottom: 10%;
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    color: #FF4F12;
+    font-size: 2em;
+}
+
+

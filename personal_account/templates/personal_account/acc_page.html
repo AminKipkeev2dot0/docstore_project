@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'personal_account/acc_page_style.css' %}">
+    {%block style%}<link rel="stylesheet" href="{% static 'personal_account/acc_page_style.css' %}">{%endblock%}
     <title>{%block title%}Account{%endblock%}</title>
 </head>
 <body>
@@ -33,9 +33,9 @@
                 <div class="dropdown">
                     <button onclick="myFunction()" class="ent_doc">Добавить документ</button>
                     <div id="btn_dropdown" class="btn_podcont">
-                        <a href="#">Паспорт</a>
-                        <a href="#">СНИЛС</a>
-                        <a href="#">Водительское удостоверение</a>
+                        <a href="{% url 'addPassp' %}">Паспорт</a>
+                        <a href="{% url 'addPassp' %}">СНИЛС</a>
+                        <a href="{% url 'addPassp' %}">Водительское удостоверение</a>
                         <a href="{% url 'add' %}">Другое</a>
                     </div>
                 </div>
