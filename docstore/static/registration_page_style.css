@@ -6,8 +6,9 @@ body{
     height: 100vh;
     margin: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items:center;
     font-size: 16px;
 }
 
@@ -16,7 +17,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
     height: 70vh;
 }
 
@@ -28,6 +29,8 @@ body{
     color: #fc5d28;
     width: fit-content;
     margin: 0 auto;
+    margin-bottom: 60px;
+    height:8vh;
     
 }
 
@@ -38,11 +41,10 @@ input{
     border-bottom:solid #E0ADA4;
     width:100%;
     /* color: #fc5d28; */
-    color: #e29d91;
+    color: #e57e6c;
     font-family: 'Roboto';
     font-size: 1em;
     margin-bottom: 14%;
-
 }
 input::placeholder{
     color: #DCC3BF;
@@ -57,10 +59,14 @@ input.login{
     
 
 }
-
 button{
-    width: 38%;
-    height: 5vh;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 10px 20px;
+    
+    /* width: 38%;
+    height: 50px; */
     background-color: #fc5d28;
     border-radius: 11px;
     border: none;
@@ -68,7 +74,6 @@ button{
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 1em;
-    margin-right: 0;
 }
 button:hover{
     transform: scale(1.1);
@@ -95,6 +100,40 @@ a:hover{
 .inputs{
     width: 100%;
     margin-top: 0%;
+}
+.inputs ul{
+    margin-top: 7px;
+    color:#d86d5a;
+    font-size:0.8em;
+    font-family: 'Roboto';
+    font-weight: 200;
+    margin-bottom: 40px;
+}
+.inputs p{
+    margin-bottom: 50px;
+}
+.inputs label{
+    width:100%;
+    /* color: #fc5d28; */
+    color: #de6a55;
+    font-family: 'Roboto';
+    font-size: 1em;
+    
+}
+.inputs input{
+    margin-top: 19px;
+    margin-bottom: 7px;
+}
+.helptext{
+    color:#d86d5a;
+    font-size:0.8em;
+    font-family: 'Roboto';
+    font-weight: 200;
+}
+h2{
+    color: #f12708;
+    font-family: 'Roboto';
+    font-weight: 500;
 }
 
 

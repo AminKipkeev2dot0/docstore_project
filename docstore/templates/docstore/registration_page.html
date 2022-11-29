@@ -8,19 +8,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'registration_page_style.css' %}">
     <title>Registration</title>
 </head>
 <body>
     <div class="container">
         <h1 class="logo">DocStore</h1>
+        <h2>{{error}}</h2>
         <div class="inputs">
-            <input type="email" placeholder="Email" class="email">
+            <form method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit">Регистрация</button>
+            </form> 
+            <!-- <input type="email" placeholder="Email" class="email">
             <input type="text" class="fio" placeholder="ФИО">
-            <input type="password" class="password" placeholder="Пароль">
+            <input type="password" class="password" placeholder="Пароль"> -->
         </div>
-        <button>Регистрация</button>
     </div>
 </body>
 </html>
