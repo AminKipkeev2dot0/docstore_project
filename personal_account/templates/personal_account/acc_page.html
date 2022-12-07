@@ -13,13 +13,17 @@
     <title>{%block title%}Account{%endblock%}</title>
 </head>
 <body>
+    {% if user.is_authenticated %}
     {%block header%}
     <div class="container">
         <div class="upper-menu">
             <h1 class="logo">DocStore</h1>
             <div class="right_p">
-                <div class="acc_owner_asPassport">Мистер Мистерович Бурмистров</div>
-                <img src="{% static 'personal_account/img/logout.png' %}" alt="logout">
+                <div class="acc_owner_asPassport">{{user.username}}</div>
+                <form action="{%url 'logout'%}">
+                    {%csrf_token%}
+                    <button type="submit"><img src="{% static 'personal_account/img/logout.png' %}" alt="logout"></button>
+                </form>
             </div>   
         </div>
     {%endblock%}
@@ -27,7 +31,7 @@
             {%block content%}
                 <div class="list_of_docs">
                         {%for doc in docs%}
-                        <a>{{doc.title}}</a>
+                        <a>{{user.doc.title}}</a>
                         {%endfor%}
                 </div>
                 <div class="dropdown">
@@ -73,6 +77,9 @@
         </div>
     
     </div>
+    {%else%}
+    <a href="{% url 'registr' %}">Необходимо войти в аккаунт</a>
+    {%endif%}
     <!-- <div class="pupup">
         <form method="post">
             {%csrf_token%}

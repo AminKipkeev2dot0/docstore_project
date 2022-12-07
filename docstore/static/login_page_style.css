@@ -11,21 +11,28 @@ body{
     font-size: 16px;
 }
 .main{
-    width: 60%;
+    width: 50%;
     display: flex;
     justify-content: space-between;
     padding-right: 3%;
 }
+.un{
+    display: flex;
+    width: 100%;
+    justify-content:space-between;
+    align-items: center;
+}
 img{
     scale: 1.12;
 }
+
 .container{
     width: 33%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 53vh;
+    height: 49vh;
 }
 
 
@@ -38,6 +45,12 @@ img{
     margin: 0 auto;
 }
 
+label{
+    width:100%;
+    color: #a44d2f;
+    font-family: 'Roboto';
+    font-size: 1em;
+}
 input{
     border-left: none;
     border-right: none;
@@ -45,7 +58,7 @@ input{
     border-bottom:solid #E0ADA4;
     width:100%;
     /* color: #fc5d28; */
-    color: #e29d91;
+    color: #da452e;
     font-family: 'Roboto';
     font-size: 1em;
 }
@@ -66,6 +79,7 @@ input.login{
 button{
     width: 38%;
     height: 5vh;
+    margin-top: 20px;
     background-color: #fc5d28;
     border-radius: 11px;
     border: none;
@@ -107,8 +121,8 @@ a:hover{
     display: flex;
     font-display: column;
     justify-content: space-between;
-    align-items:center;
-    margin-top: 19%;
+    align-items:flex-end;
+    margin-top: 6px;
     width: 100%;
 }
 .problems{

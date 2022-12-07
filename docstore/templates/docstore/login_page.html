@@ -17,17 +17,21 @@
         <img src="static/img/docs_pic.svg" alt=""> 
         <div class="container">
             <h1 class="logo">DocStore</h1>
-            <div class="inputs">
-                <input type="email" placeholder="Электронная почта" class="login">
-                <input type="password" class="password" placeholder="Пароль">
-            </div>
-            <div class="enter">
-                <div class="problems">
-                    <a href="{% url 'registr' %}">Регистрация</a>
-                    <a href="{% url 'forgot_pass' %}">Забыли пароль?</a>
+            {{error}}
+            <form method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <div class="un">
+                    <div class="enter">
+                        <div class="problems">
+                            <a href="{% url 'registr' %}">Регистрация</a>
+                            <a href="{% url 'forgot_pass' %}">Забыли пароль?</a>
+                        </div>
+                        <button type="submit">Войти</button>
+                        <!-- <button>Войти</button> -->
+                    </div>
                 </div>
-                <button>Войти</button>
-            </div>
+            </form>
         </div> 
     </div>
 </body>
