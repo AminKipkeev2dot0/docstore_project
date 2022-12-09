@@ -1,25 +1,26 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect,get_object_or_404
 from django.views.generic.edit import CreateView
 from .models import Doc
 from .forms import DocForm
 from django.urls import reverse_lazy
 
-# Create your views here.
-# def acc_page_load(request):
-#     docs=Doc.objects.all()
-#     return render(request, 'personal_account/acc_page.html',{'docs':docs})
-
 def acc_page_load(request):
-        docs=Doc.objects.all()
+        docs=Doc.objects.filter(user=request.user)
         return render(request, 'personal_account/acc_page.html',{'docs':docs})
 
+def view_load(request,num):
+        now_doc=get_object_or_404(Doc,pk=num)
+        docs=Doc.objects.filter(user=request.user)
+        return render(request, 'personal_account/view_page.html',{'docs':docs,'doc':now_doc})
 def addPassword_page_load(request):
         return render(request, 'personal_account/add_passp_page.html')
 
-class DocCreateView(CreateView):
-    template_name='personal_account/add_page.html'
-    form_class=DocForm
-    success_url=reverse_lazy('acc_page')
-    def get_context_data(self, **kwargs):
-          return super().get_context_data(**kwargs)
-    
+def createDoc(request):
+        if request.method=='GET':
+                return render(request, 'personal_account/add_page.html',{'form':DocForm()})
+        else:
+                form=DocForm(request.POST,request.FILES)
+                newdoc=form.save(commit=False)
+                newdoc.user=request.user
+                newdoc.save()
+                return redirect('acc_page')

@@ -46,25 +46,13 @@
                 
                 <div class="doc_view">
                     <div class="scan">
-                        <div class="back_of_scan"><img src="" alt="scan" class="scan"></div>
+                        <div class="back"><img src="{{doc.scan.url}}" alt="scan" class="img_scan"></div>
                         <button class="change_scan">Изменить</button>
                     </div>
                     <div class="doc_data">
-                        <div class="cols">
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
-                            <div class="col"></div>
+                        <div class="bl">
+                            <h2>{{doc.title}}</h2>
+                            <p>{{doc.descr}}</p>
                         </div>
                         <div class="btns">
                             <button>Изменить</button>
