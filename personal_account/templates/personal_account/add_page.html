@@ -1,16 +1,95 @@
-{%extends 'personal_account/acc_page.html'%}
-{%block title%}New doc{%endblock%}
-{%block content%}
-<div class="popup">
-    <form method="post" action="{%url 'add'%}" enctype="multipart/form-data">
-        {% csrf_token %}
-        {%for field in form%}
-        <div class="block">
-            <div class="name">{{field.label_tag}}</div>
-        <div class="enter">{{field}}</div>
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    {%block style%}<link rel="stylesheet" href="{% static 'personal_account/acc_page_style.css' %}">{%endblock%}
+    <title>{%block title%}Account{%endblock%}</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+    {%block header%}
+    <div class="container">
+        <div class="upper-menu">
+            <h1 class="logo">DocStore</h1>
+            <div class="right_p">
+                <div class="acc_owner_asPassport">{{user.username}}</div>
+                <form action="{%url 'logout'%}">
+                    {%csrf_token%}
+                    <button type="submit"><img src="{% static 'personal_account/img/logout.png' %}" alt="logout"></button>
+                </form>
+            </div>   
         </div>
-        {%endfor%}
-        <button type="submit" class="submit_doc"> Добавить</button>  
-    </form>
-</div>
-{%endblock%}
+    {%endblock%}
+        <div class="content">
+            {%block content%}
+                <div class="list_of_docs">
+                        {%for doc in docs%}
+                        <a href="{% url 'view_page' doc.id %}">{{doc.title}}</a>
+                        {%endfor%}
+                </div>
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="ent_doc">Добавить документ</button>
+                    <div id="btn_dropdown" class="btn_podcont">
+                        <a href="{% url 'addPassp' %}">Паспорт</a>
+                        <a href="{% url 'addPassp' %}">СНИЛС</a>
+                        <a href="{% url 'addPassp' %}">Водительское удостоверение</a>
+                        <a href="{% url 'add' %}">Другое</a>
+                    </div>
+                </div>
+                <div class="popup">
+                    <form method="post" action="{%url 'add'%}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {%for field in form%}
+                        <div class="block">
+                            <div class="name">{{field.label_tag}}</div>
+                        <div class="enter">{{field}}</div>
+                        </div>
+                        {%endfor%}
+                        <button type="submit" class="submit_doc"> Добавить</button>  
+                    </form>
+                </div>
+                
+            {%endblock%}
+        </div>
+    
+    </div>
+    {%else%}
+    <a href="{% url 'registr' %}">Необходимо войти в аккаунт</a>
+    {%endif%}
+    <!-- <div class="pupup">
+        <form method="post">
+            {%csrf_token%}
+            {{form.as_p}}
+        </form>
+    </div> -->
+    <script>
+        /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("btn_dropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function(event) {
+        if (!event.target.matches('.ent_doc')) {
+
+            var dropdowns = document.getElementsByClassName("btn_podcont");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+            }
+        }
+        }
+    </script>
+</body>
+</html>

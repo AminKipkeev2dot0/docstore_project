@@ -47,7 +47,6 @@
                 <div class="doc_view">
                     <div class="scan">
                         <div class="back"><img src="{{doc.scan.url}}" alt="scan" class="img_scan"></div>
-                        <button class="change_scan">Изменить</button>
                     </div>
                     <div class="doc_data">
                         <div class="bl">
@@ -55,9 +54,8 @@
                             <p>{{doc.descr}}</p>
                         </div>
                         <div class="btns">
-                            <button>Изменить</button>
-                            <button>Использовано</button>
-                            <button>Удалить</button>
+                            <a href="{% url 'change' doc.id %}">Изменить</a>
+                            <a href="{% url 'delete_doc' doc.id %}">Удалить</a>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,17 @@
+{%extends 'personal_account/acc_page.html'%}
+{%block title%}New doc{%endblock%}
+{%block content%}
+{{error}}
+<div class="popup">
+    <form method="POST">
+        {% csrf_token %}
+        {%for field in form%}
+        <div class="block">
+            <div class="name">{{field.label_tag}}</div>
+        <div class="enter">{{field}}</div>
+        </div>
+        {%endfor%}
+        <button type="submit" class="submit_doc"> Сохранить</button>  
+    </form>
+</div>
+{%endblock%}
